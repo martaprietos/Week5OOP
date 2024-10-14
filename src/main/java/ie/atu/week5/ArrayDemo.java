@@ -1,7 +1,11 @@
 package ie.atu.week5;
 
+import java.util.Scanner;
+
 public class ArrayDemo {
     public static void main(String[] args) {
+        int i = 0, number = 0;
+        Scanner sc = new Scanner(System.in);
         int[] myArray = new int[10];
         myArray[0] = 100;
         myArray[1] = 200;
@@ -14,9 +18,17 @@ public class ArrayDemo {
         myArray[8] = 900;
         myArray[9] = 1000;
 
-        for(int i = 0;i<10;i++){
+        for(i = 0;i<10;i++){
             myArray[i] = 100 + (i*100);
             System.out.println(myArray[i]);
+        }
+
+        try {
+            System.out.println("Enter a number: ");
+            sc.nextInt(myArray[10]);
+        }
+        catch (Exception e){
+            System.out.println("Something went wrong.");
         }
 
     }
